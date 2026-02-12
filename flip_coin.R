@@ -87,7 +87,6 @@ p <- ggplot() +
   # Manual X-axis Ticks and Labels
   annotate("segment", x = face_pos, xend = face_pos, y = 0, yend = -0.015) +
   annotate("text", x = face_pos, y = -0.04, label = names(face_pos), size = 15) +
-  
   geom_rect(
     data = blocks_freq,
     aes(
@@ -161,7 +160,7 @@ p <- ggplot() +
   theme_animint(width = 600)
 
 
-viz <- list(
+viz <- animint(
   coin = p,
   time = list(variable = "toss", ms = 300),
   selector = list(caption = list(
